@@ -1,0 +1,108 @@
+body{
+    margin: 0;
+    background-color: #D0E0F0;
+    font-family: Inter;
+    font-size: 22px;
+}
+
+header{
+    background-color: #758FAE;
+    /* padding-left: 600px; */
+    display: flex;
+    justify-content: right;    
+    padding-right: 10px;
+}
+.headtext{
+    display: inline-flex;
+    margin-left: 130px;
+    color: white;
+}
+
+.headtext a{
+    color: white;
+}
+
+.all{
+    display: flex;
+    justify-content: center;
+    margin-left: 70px;
+    margin-right: 70px;
+    text-align: center;
+    margin-top: 50px;
+}
+.cont{
+    margin-left: 15px;
+}
+
+.btnstart{
+    display: flex;
+    justify-content: center;
+    border-radius: 35px;
+    border-color: #9FB4CD;
+    border-width: 5px;
+    border-style: solid;
+    margin-left: 485px;
+    margin-right: 485px;
+    margin-top: 101px;
+}
+
+.startbtn{
+    display: block;
+    border-radius: 35px;
+    border-color: #9FB4CD;
+    border-width: 5px;
+    border-style: solid;
+    justify-content: center;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.ques{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.5);
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.5s all;
+}
+.ques.active {
+    opacity: 1;
+    pointer-events: all;
+    transition: 0.5s all;
+}
+
+.que {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    background: #fff;
+    width: 400px;
+    padding: 25px;
+    transition: 0.5s all;
+}
+
+.que.active{
+    transform: translate(-50%, -50%) scale(1);
+    transition: 0.5s all;
+}
+.name{
+    display: inline;
+    justify-content: center;
+    text-align: center;
+}
+.dream{
+    display: inline;
+    justify-content: center;
+    text-align: center;
+}
+
+input{
+    display: inline-flex;
+}
+.btn{
+    cursor: pointer;
+}

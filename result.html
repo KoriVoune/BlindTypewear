@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <header>
+    <div class="header">
+      <p class="headtext"><a href="index.html">Главная</a></p>
+      <p class="headtext">О нас</p>
+      <p class="headtext"><a href="app.html">Начать</a></p>
+      <p class="headtext">Контакты</p>
+    </div>
+  </header>
+  <main>
+    <div>
+    
+      <div class="back">
+        <h2 class="back1"><a href="index.html">на главную</a></h2>
+      </div>
+    </div>
+    <div>
+      <canvas id="myChart"></canvas>
+    </div>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style_result.css">
+    <link rel="stylesheet" href="style_main.css">
+  </main>
+
+  
+</body>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <script>
+    let text_one = document.querySelector('.onee')
+    text_one = localStorage.getItem('total')
+    let text_two = document.querySelector('.twoo')
+    text_two = localStorage.getItem('time')
+    
+    const ctx = document.getElementById('myChart');
+    let attempts = JSON.parse(localStorage.getItem('attempts')) || [];
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: attempts,
+        datasets: [{
+          label: '# of Votes',
+          data: attempts,
+
+          borderWidth: 10
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+    console.log(localStorage.getItem("attempts"))
+
+  </script>
+</html>

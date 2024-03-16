@@ -1,0 +1,41 @@
+* {
+    font-family: Inter;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #D0E0F0;
+}
+
+
+.zagolovok1 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 111px;
+}
+
+.zagolovok2 {
+    margin-bottom: 81px;
+}
+
+.back {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 56px;
+    right: 46px;
+}
+
+.back::after {
+    content: url('красивая.svg');
+    display: inline-block;
+    scale: 0.36;
+}
+#myChart
+{
+    max-width:1024px;
+    max-height:1024px;
+}
